@@ -1,0 +1,208 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro - EsToDoList</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-slate-100 min-h-screen">
+
+  <!-- Cabeçalho -->
+  <header class="bg-purple-700 text-white">
+    <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+
+      <h1 class="lg:text-3xl font-bold">EsToDoList</h1>
+
+      <span class="hidden sm:inline font-bold text-sm">
+        Organize sua rotina escolar
+      </span>
+
+    </div>
+  </header>
+
+  <!-- Formulário de cadastro -->
+  <main class="max-w-2xl mx-auto px-4 py-6">
+
+    <section class="bg-gray-800 rounded-xl shadow p-5 space-y-5">
+
+      <h2 class="text-xl font-bold text-center">
+        Informações da tarefa
+      </h2>
+
+      <form class="space-y-4">
+
+        <!-- Nome da tarefa -->
+        <div class="space-y-2">
+
+          <label for="tarefa" class="block text-sm font-medium">
+            Tarefa:
+          </label>
+
+          <input
+            type="text"
+            id="tarefa"
+            name="tarefa"
+            placeholder="Digite o nome da tarefa"
+            required
+            class="w-full rounded-lg px-3 py-3 text-sm text-slate-800"
+          >
+
+        </div>
+
+        <!-- Descrição -->
+        <div class="space-y-2">
+
+          <label for="descricao" class="block text-sm font-medium">
+            Descrição:
+          </label>
+
+          <textarea
+            id="descricao"
+            name="descricao"
+            placeholder="Descreva sua tarefa..."
+            rows="3"
+            class="w-full rounded-lg px-3 py-3 text-sm text-slate-800 resize-y"
+          ></textarea>
+
+        </div>
+
+        <!-- Categoria -->
+        <div class="space-y-2">
+
+          <label for="categoria" class="block text-sm font-medium">
+            Categoria:
+          </label>
+
+          <select
+            id="categoria"
+            name="categoria"
+            class="w-full rounded-lg px-3 py-3 text-sm text-slate-800"
+          >
+
+            <option value="">Selecione uma categoria</option>
+            <option value="escola">Escola</option>
+            <option value="pessoal">Pessoal</option>
+            <option value="trabalho">Trabalho</option>
+
+          </select>
+
+        </div>
+
+        <!-- Prazo -->
+        <div class="space-y-2">
+
+          <label for="prazo" class="block text-sm font-medium">
+            Prazo:
+          </label>
+
+          <input
+            type="date"
+            id="prazo"
+            name="prazo"
+            required
+            class="w-full rounded-lg px-3 py-3 text-sm text-slate-800"
+          >
+
+        </div>
+
+        <!-- Status -->
+        <div class="space-y-2">
+
+          <span class="block text-sm font-medium">
+            Status:
+          </span>
+
+          <label class="flex items-center gap-3">
+
+            <input
+              type="checkbox"
+              name="status"
+              class="w-5 h-5 accent-purple-600"
+            >
+
+            <span class="text-sm">
+              Concluída
+            </span>
+
+          </label>
+
+          <p class="text-xs text-slate-400">
+            Desmarcado = Pendente
+          </p>
+
+        </div>
+
+        <!-- Prioridade -->
+        <div class="space-y-2">
+
+          <span class="block text-sm font-medium">
+            Prioridade:
+          </span>
+
+          <div class="flex flex-wrap gap-4">
+
+            <label class="flex items-center gap-2 text-sm">
+              <input
+                type="radio"
+                name="prioridade"
+                value="baixa"
+                checked
+                class="accent-purple-600"
+              >
+              Baixa
+            </label>
+
+            <label class="flex items-center gap-2 text-sm">
+              <input
+                type="radio"
+                name="prioridade"
+                value="media"
+                class="accent-purple-600"
+              >
+              Média
+            </label>
+
+            <label class="flex items-center gap-2 text-sm">
+              <input
+                type="radio"
+                name="prioridade"
+                value="alta"
+                class="accent-purple-600"
+              >
+              Alta
+            </label>
+
+          </div>
+
+        </div>
+
+        <!-- Botões -->
+        <div class="flex flex-col sm:flex-row gap-3 pt-2">
+
+          <a
+            href="index.html"
+            class="flex-1 text-center px-4 py-3 rounded-lg bg-red-500 text-white font-semibold hover:bg-red-600"
+          >
+            Cancelar
+          </a>
+
+          <button
+            type="button"
+            class="flex-1 px-4 py-3 rounded-lg bg-green-500 text-white font-semibold hover:bg-green-600"
+          >
+            Enviar
+          </button>
+
+        </div>
+
+      </form>
+
+    </section>
+
+  </main>
+
+</body>
+</html>
